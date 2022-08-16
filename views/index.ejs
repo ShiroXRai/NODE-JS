@@ -1,0 +1,15 @@
+<h1>Temancoding</h1>
+<p>belajar nodejs request & response</p>
+
+<h3>Daftar Materi</h3>
+
+<% data.map((d)=>{ %>
+
+<a href="/materi/<%= d.id %>">
+  <div class="card">
+    <p>Judul = <%= d.judul %></p>
+    <p>Narsum = <%= d.narsum %></p>
+  </div>
+</a>
+<br />
+<% }); %>

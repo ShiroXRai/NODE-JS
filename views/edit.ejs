@@ -1,0 +1,28 @@
+<h1>Edit Materi Temancoding</h1>
+<form action="/materi/<%=id %> " method="POST">
+  <div class="form-group mb-3">
+    <input type="hidden" name="id" value="<%=data.id %>" />
+    <label for="judul">Judul Materi</label>
+    <input
+      type="text"
+      class="form-control"
+      id="judul"
+      aria-describedby="textHelp"
+      placeholder="Masukan Judul Materi"
+      name="judul"
+      value="<%= data.judul %>"
+    />
+  </div>
+  <div class="form-group mb-3">
+    <label for="narasumber">Narasumber</label>
+    <input
+      type="text"
+      class="form-control"
+      id="narasumber"
+      placeholder="Masukan Nama Narasumber"
+      name="narsum"
+      value="<%= data.narsum %>"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

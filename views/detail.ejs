@@ -1,0 +1,22 @@
+<h1>Temancoding</h1>
+<p>belajar nodejs request & response</p>
+<br /><br />
+<div class="card">
+  <h1><%= data[0].judul %></h1>
+  <p>Narsum (<%= data[0].narsum %>)</p>
+</div>
+<br /><br />
+<a href="/edit-materi/<%=id %>">EDIT</a>
+<a class="delete" data-doc="<%=id %> ">DELETE</a>
+<script>
+  const hapus = document.querySelector("a.delete");
+
+  hapus.addEventListener("click", (e) => {
+    const endpoint = `/materi/${hapus.dataset.doc}`;
+
+    fetch(endpoint, { method: "DELETE" })
+      .then((response) => response.json())
+      .then((data) => (window.location.href = data.redirect))
+      .catch((err) => console.log(err));
+  });
+</script>
